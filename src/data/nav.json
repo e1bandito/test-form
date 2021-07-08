@@ -1,0 +1,14 @@
+[
+  {
+    "path": "index.html",
+    "title": "main"
+  },
+  {
+    "path": "page2.html",
+    "title": "page2"
+  },
+  {
+    "path": "page3.html",
+    "title": "page3"
+  }
+]
