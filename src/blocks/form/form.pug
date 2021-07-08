@@ -1,0 +1,51 @@
++b.FORM.form(action='', method="POST")
+  +e.inner.--main
+    +e.wrapper
+      +e.header
+        +e.item
+          +e.H2.title Info
+          +input('email', 'email', 'Enter your email address', 'email', 'team@checkforpatent.com')
+      +e.products
+        +e.item
+          +e.H2.title Product 1
+          +input('product-keyword-1', 'product-keyword-1', 'Enter main keyword for the product', 'text', 'for example, sylicon wine cup')
+          +input('product-link-1', 'product-link-1', 'Enter link to the similar product as a reference', 'text', 'https://...')
+      +e.more-products
+        +e.BUTTON.add-more
+          +e.SPAN.add-more-text Add more products
+          +icon('plus')(width="13", height="13")
+        +e.more-products-text We offer discount up to 36% for multiple checks
+    +e.footer
+      +btn('submit', 'Submit and Pay 24.99 USD', '', true)
+      +e.SPAN.secure-payment-text
+        +icon('secure')(width="9", height="13",)
+        | Secure payment with Stripe
+
+  //- +e.inner.--add-product
+    +e.H2.title Adding more products
+    +e.P.text The more items you check, the better the price.
+    +e.wrapper
+      +e.add-product-inner
+        +radio('5-products', '80', '5 products for 80 usd / 16$ for each', 'You safe 36% on each patent check', true)
+        +radio('4-products', '72', '4 products for 72 usd / 18$ for each', 'You safe 28% on each patent check ')
+        +radio('3-products', '60', '3 products for 60 usd / 20$ for each', 'You safe 20% on each patent check')
+        +radio('2-products', '44', '2 products for 44 usd / 22$ for each', 'You safe 12% on each patent check ')
+        +radio('1-product', '24.99', '1 product for 24.99 usd')
+    +e.footer
+      +btn('button', 'Continue', '')
+
+  //- +e.inner.--success-payment
+    +e.H2.title Successfull payment
+    +e.P.text Your request has been accepted and will be processed within 24 working hours. We will send you a payment details and all information to your email.
+    +e.wrapper.--success-payment
+    +e.footer
+      +btn('button', 'Back', '')
+
+  //- +e.inner.--error-payment
+    +e.H2.title Your payment failed
+    +e.P.text Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.
+    +e.wrapper.--error-payment
+    +e.footer
+      +btn('button', 'Try to pay again', 'btn--secondary')
+
+

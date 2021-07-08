@@ -9,19 +9,31 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="nav">
-        <div class="nav__inner">
-          <ul class="nav__list">
-            <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">main</a></li>
-            <li class="nav__item"><a class="nav__link" href="page2.html">page2</a></li>
-            <li class="nav__item"><a class="nav__link" href="page3.html">page3</a></li>
-          </ul>
+  <div class="container container--form">
+    <form class="form" action="" method="POST">
+      <div class="form__inner form__inner--main">
+        <div class="form__wrapper">
+          <div class="form__header">
+            <div class="form__item">
+              <h2 class="form__title">Info</h2>
+              <div class="input"><label class="input__label">Enter your email address<input class="input__field" name="email" type="email" placeholder="team@checkforpatent.com" /></label></div>
+            </div>
+          </div>
+          <div class="form__products">
+            <div class="form__item">
+              <h2 class="form__title">Product 1</h2>
+              <div class="input"><label class="input__label">Enter main keyword for the product<input class="input__field" name="product-keyword-1" type="text" placeholder="for example, sylicon wine cup" /></label></div>
+              <div class="input"><label class="input__label">Enter link to the similar product as a reference<input class="input__field" name="product-link-1" type="text" placeholder="https://..." /></label></div>
+            </div>
+          </div>
+          <div class="form__more-products"><button class="form__add-more"><span class="form__add-more-text">Add more products</span><svg width="13" height="13"><use xlink:href="img/sprite.svg#icon_plus"></use></svg></button>
+            <div class="form__more-products-text">We offer discount up to 36% for multiple checks</div>
+          </div>
         </div>
-      </div><button class="burger"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
-    </div>
-  </header>
+        <div class="form__footer"><button class="btn" type="submit"><span class="btn__text">Submit and Pay 24.99 USD</span><svg class="loader" width="32" height="32"><use xlink:href="img/sprite.svg#icon_loader"></use></svg></button><span class="form__secure-payment-text"><svg width="9" height="13"><use xlink:href="img/sprite.svg#icon_secure"></use></svg>Secure payment with Stripe</span></div>
+      </div>
+    </form>
+  </div>
   <script src="./js/main.min.js"></script>
 </body>
 

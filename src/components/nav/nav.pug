@@ -1,8 +1,0 @@
-- const data = getData('nav')
-
-+b.nav
-  +e.inner
-    +e.UL.list
-      each item in data
-        +e.LI.item(class= (item.title === pageTitle) ? "--active" : "")
-          +e.A.link(href= item.path) #{item.title}

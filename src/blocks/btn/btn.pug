@@ -1,0 +1,5 @@
+mixin btn(type, text, className, loader)
+  +b.BUTTON(type=type, class='btn ' + className)
+    +e.SPAN.text #{text}
+    if loader
+      +icon('loader')(width="32", height="32", class="loader")

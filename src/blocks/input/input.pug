@@ -1,0 +1,4 @@
+mixin input(id, name, label, type, placeholder)
+  +b.input
+    +e.LABEL.label= label
+      +e.INPUT.field(name=name, type=type, placeholder=placeholder)
