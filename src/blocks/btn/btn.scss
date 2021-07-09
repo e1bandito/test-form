@@ -23,9 +23,16 @@
     display: none;
   }
 
-  &--loading .loader {
-    display: inline-block;
-    animation: loading 2s linear infinite;
+  &--loader {
+    .loader {
+      display: inline-block;
+      animation: loading 2s linear infinite;
+    }
+
+    &:hover {
+      background-color: $accent;
+      cursor: not-allowed;
+    }
   }
 
   &--secondary {
@@ -35,6 +42,10 @@
       background-color: darken($secondary, 10%);
     }
   }
+}
+
+.btn__text--hide {
+  display: none;
 }
 
 @keyframes loading {

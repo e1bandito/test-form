@@ -28,7 +28,8 @@
 .form__wrapper {
   margin-bottom: 10px;
   flex-grow: 1;
-  overflow-y: auto;
+  z-index: 0;
+  min-height: 1px;
 
   &--success-payment {
     background-image: url('../img/payment-success.png');
@@ -91,6 +92,39 @@
   &:hover {
     color: darken($accent, 20%);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.form__products .form__item:nth-child(2) .form__delete-btn {
+  display: none;
+}
+
+.form__delete-btn {
+  @include clear-button;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  color: $accent;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: darken($accent, 20%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      color: $accent;
+    }
+  }
 }
 
 .form__more-products-text {
@@ -118,6 +152,7 @@
 
 .form__footer {
   min-height: 76px;
+  z-index: 1;
 }
 
 .form__text {

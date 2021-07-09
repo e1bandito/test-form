@@ -74,3 +74,22 @@ a {
     overflow: hidden;
   }
 }
+
+.simplebar-track {
+  right: -20px;
+  background-color: #e1e3ee;
+  border-radius: 5px;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 4px;
+}
+
+.simplebar-scrollbar {
+  background-color: $accent;
+  border-radius: 5px;
+}
+
+.simplebar-scrollbar::before {
+  background-color: transparent;
+}
