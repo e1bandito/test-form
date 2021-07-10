@@ -1,7 +1,7 @@
 .form {
   position: relative;
   width: 440px;
-  height: 535px;
+  height: 600px;
   background-color: $white;
   box-shadow: 10px 10px 60px #e2e7ff;
   border-radius: 0px 50px 50px 50px;
@@ -16,13 +16,21 @@
     background-image: url('../img/pattern.svg');
     z-index: -1;
   }
+
+  @include min($sm) {
+    height: 535px;
+  }
 }
 
 .form__inner {
-  padding: 35px;
+  padding: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @include min($sm) {
+    padding: 35px;
+  }
 }
 
 .form__wrapper {

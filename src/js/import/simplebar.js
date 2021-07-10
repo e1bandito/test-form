@@ -1,5 +1,9 @@
 import SimpleBar from 'simplebar';
 
-let simplebar = new SimpleBar(document.querySelector('.js-simplebar'), {
-  autoHide: false,
+const $simpleBars = document.querySelectorAll('.js-simplebar');
+
+$simpleBars.forEach((el) => {
+  new SimpleBar(el, {
+    autoHide: false,
+  });
 });

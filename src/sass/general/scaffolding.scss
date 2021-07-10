@@ -53,32 +53,54 @@ a {
   max-width: 1336px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 141px;
-  padding-right: 141px;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  @include max($xl) {
+  @include min($md) {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  @include max($md) {
-    padding-left: 15px;
-    padding-right: 15px;
+  @include min($xl) {
+    padding-left: 141px;
+    padding-right: 141px;
   }
 
   &--form {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     min-height: 100vh;
     overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include min($sm) {
+      justify-content: flex-end;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include min($md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include min($xl) {
+      padding-left: 141px;
+      padding-right: 141px;
+    }
   }
 }
 
 .simplebar-track {
-  right: -20px;
+  right: 0;
   background-color: #e1e3ee;
   border-radius: 5px;
+
+  @include min($sm) {
+    right: -20px;
+  }
 }
 
 .simplebar-track.simplebar-vertical {
