@@ -1,7 +1,0 @@
-mixin radio(id, value, price, text, stock, checked)
-  +b.radio
-    +e.INPUT.field.visually-hidden(id=id, type="radio", value=value name="count-products", x-model="productsCount" checked=checked)
-    +e.LABEL.label(for=id)
-      +e.SPAN.text= text
-      if stock
-        +e.SPAN.stock= stock
